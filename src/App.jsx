@@ -1,24 +1,14 @@
-import { useState } from "react";
-import "./App.css";
+import Home from "./Components/Home";
+import About from "./Components/About";
+import { Outlet } from "react-router-dom";
 
-function App() {
-  const [show, hehe] = useState(true);
-
+export default function App() {
   return (
     <>
-      {show && <Child />}{" "}
-      <button
-        onClick={() => {
-          hehe((prev) => !prev);
-        }}
-      >
-        Toggle child
-      </button>
+      This is my Website
+      {/* <Home />
+      <About /> */}
+      <Outlet />
     </>
   );
 }
-
-function Child() {
-  return <>HI</>;
-}
-export default App;
